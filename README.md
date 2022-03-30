@@ -1,5 +1,6 @@
-# ✅ push_swap
-Push_swap (42cursus) 2020-2021. Here the aim is to sort data stacks, using the lowest possible number of actions.
+# push_swap 📚
+Push_swap 2021 - (Common Core).
+The aim is to sort data stacks, using the lowest possible number of actions.
 
 - Actual Status : finished.
 - Result        : 125%
