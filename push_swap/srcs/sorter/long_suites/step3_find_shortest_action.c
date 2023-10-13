@@ -1,18 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   step3.c                                            :+:      :+:    :+:   */
+/*   step3_find_shortest_action.c                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: malatini <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: mahautlatinis <mahautlatinis@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/10 18:32:02 by malatini          #+#    #+#             */
-/*   Updated: 2021/06/14 13:12:20 by malatini         ###   ########.fr       */
+/*   Updated: 2023/10/13 15:13:29 by mahautlatin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <sorter/sorter.h>
 
-/* Calcule de façon optimiséele nombre d'actions a faire */
 int	optimize_actions(int c_a, int c_b)
 {
 	if (c_a > 0 && c_b > 0)
@@ -29,10 +28,9 @@ void	init_variables(int *i, int *pos, bool *end)
 	*i = 1;
 	*pos = 0;
 	*end = false;
+	return ;
 }
 
-/* Calcule le nombre d'actions a faire pour positionner au bon index sur A */
-/* Pour tous les elements, a recalculer apres avoir deplacé 1 élément */
 int	where_to_insert(t_stack *sta, int x, t_s_elem *tmp, t_s_elem *prev)
 {
 	int			i;
@@ -59,7 +57,6 @@ int	where_to_insert(t_stack *sta, int x, t_s_elem *tmp, t_s_elem *prev)
 	return (pos);
 }
 
-/* Calcule le plus petit nombre d'actions a faire pour trier un element */
 t_s_elem	*evaluate_actions(t_mem *mem, t_params *params)
 {
 	t_s_elem	*tmp;

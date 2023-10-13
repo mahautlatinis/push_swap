@@ -3,16 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   rotate_stack.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: malatini <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: mahautlatinis <mahautlatinis@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/02 16:51:08 by malatini          #+#    #+#             */
-/*   Updated: 2021/06/14 09:15:11 by malatini         ###   ########.fr       */
+/*   Updated: 2023/10/13 15:09:15 by mahautlatin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <common/common.h>
 
-/* Fonction rotate utile pour toutes les actions */
 void	rotate_stack(t_stack *sta)
 {
 	t_s_elem	*last;
@@ -25,9 +24,9 @@ void	rotate_stack(t_stack *sta)
 	sta->first = sta->first->next;
 	tmp->next = NULL;
 	last->next = tmp;
+	return ;
 }
 
-/* Action RA demandée dans le sujet */
 void	ra(t_stack *a, int print_option, t_mem *mem)
 {
 	if (!a || !mem)
@@ -36,9 +35,9 @@ void	ra(t_stack *a, int print_option, t_mem *mem)
 	if (print_option == 1)
 		write(1, "ra\n", 3);
 	mem->action_count++;
+	return ;
 }
 
-/* Action RB demandée dans le sujet */
 void	rb(t_stack *b, int print_option, t_mem *mem)
 {
 	if (!b || !mem)
@@ -47,9 +46,9 @@ void	rb(t_stack *b, int print_option, t_mem *mem)
 	if (print_option == 1)
 		write(1, "rb\n", 3);
 	mem->action_count++;
+	return ;
 }
 
-/* Action RR demandée dans le sujet */
 void	rr(t_stack *a, t_stack *b, int print_option, t_mem *mem)
 {
 	if (!b || !mem || !a)
@@ -59,6 +58,7 @@ void	rr(t_stack *a, t_stack *b, int print_option, t_mem *mem)
 	if (print_option == 1)
 		write(1, "rr\n", 3);
 	mem->action_count++;
+	return ;
 }
 
 t_s_elem	*last_element(t_stack *sta)

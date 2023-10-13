@@ -3,16 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   stack_utils3.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: malatini <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: mahautlatinis <mahautlatinis@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/11 10:05:11 by malatini          #+#    #+#             */
-/*   Updated: 2021/06/14 13:18:03 by malatini         ###   ########.fr       */
+/*   Updated: 2023/10/13 15:11:06 by mahautlatin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <common/common.h>
 
-/* Verifie doublons et sera appelée quand on insère un nouvel elem */
 void	check_duplicates(t_mem *mem)
 {
 	t_s_elem	*elem1;
@@ -31,9 +30,9 @@ void	check_duplicates(t_mem *mem)
 		}
 		elem2 = elem2->next;
 	}
+	return ;
 }
 
-/* Retourne la valeur absolue d'un élément */
 int	abs_value(int x)
 {
 	if (x < 0)
@@ -41,7 +40,6 @@ int	abs_value(int x)
 	return (x);
 }
 
-/* Initialise la structure de params pour le calcul des actions */
 t_params	init_params(t_mem *mem)
 {
 	t_params	params;

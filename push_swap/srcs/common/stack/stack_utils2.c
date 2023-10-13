@@ -3,16 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   stack_utils2.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: malatini <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: mahautlatinis <mahautlatinis@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/11 09:59:48 by malatini          #+#    #+#             */
-/*   Updated: 2021/06/13 17:18:35 by malatini         ###   ########.fr       */
+/*   Updated: 2023/10/13 15:10:43 by mahautlatin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <common/common.h>
 
-/* Déplace l'élèment jusqu'en haut de la pile */
 void	bring_to_top(t_stack *sta, int x, t_mem *mem)
 {
 	if (!sta)
@@ -29,9 +28,9 @@ void	bring_to_top(t_stack *sta, int x, t_mem *mem)
 		while (!is_on_top(sta, x))
 			rra(sta, 1, mem);
 	}
+	return ;
 }
 
-/* Fonction permettant de savoir dans quel moitie de la stack se situe l'elem */
 int	where_middle(t_stack *a, int value)
 {
 	t_s_elem	*elem;
@@ -56,7 +55,6 @@ int	where_middle(t_stack *a, int value)
 	return (-1);
 }
 
-/* Fonction qui identifie le plus grand élément */
 int	biggest(t_stack *a)
 {
 	int			biggest;
@@ -75,7 +73,6 @@ int	biggest(t_stack *a)
 	return (biggest);
 }
 
-/* Identifie le plus petit élèment */
 int	smallest(t_stack *a)
 {
 	int			smallest;

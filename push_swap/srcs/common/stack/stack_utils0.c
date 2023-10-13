@@ -3,16 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   stack_utils0.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: user42 <user42@student.42.fr>              +#+  +:+       +#+        */
+/*   By: mahautlatinis <mahautlatinis@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/08 09:28:21 by malatini          #+#    #+#             */
-/*   Updated: 2021/06/14 15:37:27 by user42           ###   ########.fr       */
+/*   Updated: 2023/10/13 15:10:13 by mahautlatin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <common/common.h>
 
-/* Indique si une pile est vide ou non */
 bool	is_empty_stack(t_stack *sta)
 {
 	if (sta->first == NULL)
@@ -20,7 +19,6 @@ bool	is_empty_stack(t_stack *sta)
 	return (false);
 }
 
-/* Indique la longueur de la pile passée en paramètre */
 int	stack_length(t_stack *sta)
 {
 	int			length;
@@ -38,7 +36,6 @@ int	stack_length(t_stack *sta)
 	return (length);
 }
 
-/* Initialise notre structure */
 t_mem	*init_mem(void)
 {
 	t_mem	*mem;

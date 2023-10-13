@@ -6,7 +6,7 @@
 /*   By: mahautlatinis <mahautlatinis@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/09 15:36:14 by malatini          #+#    #+#             */
-/*   Updated: 2023/10/03 23:09:20 by mahautlatin      ###   ########.fr       */
+/*   Updated: 2023/10/13 15:13:10 by mahautlatin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,6 +71,7 @@ void	set_keep(t_mem *mem)
 	stack = mem->a;
 	max = get_max_keep(stack);
 	mem->maxsize = largest_keep_a(max, stack, true);
+	return ;
 }
 
 void	push_keep_false_b(t_mem *mem)
@@ -88,4 +89,5 @@ void	push_keep_false_b(t_mem *mem)
 		else
 			ra(mem->a, 1, mem);
 	}
+	return ;
 }

@@ -3,16 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   push_stack.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: malatini <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: mahautlatinis <mahautlatinis@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/02 16:35:58 by malatini          #+#    #+#             */
-/*   Updated: 2021/06/14 09:07:06 by malatini         ###   ########.fr       */
+/*   Updated: 2023/10/13 15:07:27 by mahautlatin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <common/common.h>
 
-/* Permet de pousser le premier élément de la stack a sur la stack b */
 void	push_other_stack(t_stack *one, t_stack *two)
 {
 	t_s_elem	*elem;
@@ -32,9 +31,9 @@ void	push_other_stack(t_stack *one, t_stack *two)
 		elem->next = NULL;
 		two->first = elem;
 	}
+	return ;
 }
 
-/* Fonction permettant d'ajouter un élément à la fin de la stack a */
 void	push_end(t_stack *sta, int x, t_mem *mem)
 {
 	t_s_elem	*elem;
@@ -60,9 +59,9 @@ void	push_end(t_stack *sta, int x, t_mem *mem)
 		temp = temp->next;
 	temp->next = elem;
 	elem->next = NULL;
+	return ;
 }
 
-/* Ajoute un element a une liste en renseignant sa valeur et son origine */
 void	push_end_plus_origin(t_stack *sta, int x, t_s_elem *ori, t_mem *m)
 {
 	t_s_elem	*elem;
@@ -89,9 +88,9 @@ void	push_end_plus_origin(t_stack *sta, int x, t_s_elem *ori, t_mem *m)
 		temp = temp->next;
 	temp->next = elem;
 	elem->next = NULL;
+	return ;
 }
 
-/* Action PA demandee dans le sujet */
 void	pa(t_stack *one, t_stack *two, int print_option, t_mem *mem)
 {
 	if (is_empty_stack(one))
@@ -102,7 +101,6 @@ void	pa(t_stack *one, t_stack *two, int print_option, t_mem *mem)
 	mem->action_count++;
 }
 
-/* Action PB demandee dans le sujet */
 void	pb(t_stack *one, t_stack *two, int print_option, t_mem *mem)
 {
 	if (is_empty_stack(one))
