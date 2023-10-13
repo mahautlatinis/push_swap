@@ -1,20 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   step_1.c                                           :+:      :+:    :+:   */
+/*   step1_target_index.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: malatini <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: mahautlatinis <mahautlatinis@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/09 09:11:07 by malatini          #+#    #+#             */
-/*   Updated: 2021/06/13 14:02:22 by malatini         ###   ########.fr       */
+/*   Updated: 2023/10/13 15:12:55 by mahautlatin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <sorter/sorter.h>
 
-/* Markup mode */
-/* Bubble sort pour déterminer à quelle position devrait se trouver l'élément */
-/* Retourne une copie de la stack passée en paramètre */
 t_stack	*cpy_stack(t_stack *sta, t_mem *mem, t_params *params)
 {
 	t_stack		*cpy;
@@ -46,8 +43,6 @@ void	bubble_swap(t_s_elem **ori, t_s_elem **tmplst, t_s_elem **elem, int *t)
 	(*tmplst)->initial_position = *ori;
 }
 
-/* Une fois la copie réalisée, nous devons la trier via bubblesort */
-/* Afin de déterminer le target index */
 t_stack	*bubble_sort_it(t_stack *cpy)
 {
 	int			temp;
@@ -73,7 +68,6 @@ t_stack	*bubble_sort_it(t_stack *cpy)
 	return (cpy);
 }
 
-/* Renseignement du target index sur la copie */
 void	set_target_index_cpy(t_stack *cpy)
 {
 	t_s_elem	*elem;
@@ -89,7 +83,6 @@ void	set_target_index_cpy(t_stack *cpy)
 	}
 }
 
-/* Renseignement du target index sur la stack A / structure principales */
 void	set_target_index(t_stack *sta)
 {
 	t_s_elem	*elem;

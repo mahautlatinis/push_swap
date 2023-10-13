@@ -1,18 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   is_sorted.c                                        :+:      :+:    :+:   */
+/*   stack_utils1.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: malatini <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: mahautlatinis <mahautlatinis@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/03 10:34:35 by malatini          #+#    #+#             */
-/*   Updated: 2021/06/13 17:09:54 by malatini         ###   ########.fr       */
+/*   Updated: 2023/10/13 15:10:27 by mahautlatin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <common/common.h>
 
-/* Cherche un doublon sur les petites suites */
 int	find_duplicate_small(t_stack *a)
 {
 	int			i;
@@ -38,7 +37,6 @@ int	find_duplicate_small(t_stack *a)
 	return (i);
 }
 
-/* Détermine si la stack est triée ou pas */
 int	is_sorted_stack(t_stack *a)
 {
 	t_s_elem	*elem;

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   exit.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: user42 <user42@student.42.fr>              +#+  +:+       +#+        */
+/*   By: mahautlatinis <mahautlatinis@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/02 15:09:51 by malatini          #+#    #+#             */
-/*   Updated: 2021/06/14 13:45:28 by user42           ###   ########.fr       */
+/*   Updated: 2023/10/13 15:09:53 by mahautlatin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ void	free_stack(t_stack *sta)
 	}
 	free(sta);
 	sta = NULL;
+	return ;
 }
 
 void	free_all(t_mem *mem, int *min_a, int *min_b)

@@ -1,18 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   bubble_sort.c                                      :+:      :+:    :+:   */
+/*   short_suites.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: user42 <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: mahautlatinis <mahautlatinis@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/02 14:02:48 by user42            #+#    #+#             */
-/*   Updated: 2021/06/13 15:44:30 by malatini         ###   ########.fr       */
+/*   Updated: 2023/10/13 15:14:02 by mahautlatin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <sorter/sorter.h>
 
-/* Sort two */
 void	sort_two(t_stack *a, t_mem *mem)
 {
 	t_s_elem	*elem;
@@ -25,7 +24,6 @@ void	sort_two(t_stack *a, t_mem *mem)
 	free_all(mem, NULL, NULL);
 }
 
-/* Gere le tri pour une suite de 3 éléments */
 void	sort_three(t_stack *a, t_mem *mem)
 {
 	int				one;
@@ -73,7 +71,6 @@ void	prep_set(t_stack *a, t_stack *b, t_mem *mem)
 	}
 }
 
-/* Gere les suites de 4 a 5 */
 void	sort_more_three(t_stack *a, t_stack *b, t_mem *mem)
 {
 	int	stack_len;
@@ -92,7 +89,6 @@ void	sort_more_three(t_stack *a, t_stack *b, t_mem *mem)
 	free_all(mem, NULL, NULL);
 }
 
-/* Gere tous les cas de petites suites */
 int	small_cases(t_stack *a, t_stack *b, t_mem *mem)
 {
 	if (stack_length(a) == 1)

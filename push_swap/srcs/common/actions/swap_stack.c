@@ -1,18 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   actions0.c                                         :+:      :+:    :+:   */
+/*   swap_stack.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: malatini <malatini@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mahautlatinis <mahautlatinis@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/29 14:18:54 by user42            #+#    #+#             */
-/*   Updated: 2021/06/14 09:21:51 by malatini         ###   ########.fr       */
+/*   Updated: 2023/10/13 15:09:04 by mahautlatin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <common/common.h>
 
-/* Fonction de swap utile pour les différentes actions */
 void	swap_ab(t_stack *sta)
 {
 	t_s_elem	*elem;
@@ -28,9 +27,9 @@ void	swap_ab(t_stack *sta)
 		sta->first->next = elem;
 		elem->next = second;
 	}
+	return ;
 }
 
-/* Action SA demandée dans le sujet */
 void	sa(t_stack *a, int print_option, t_mem *mem)
 {
 	if (!a || !mem)
@@ -39,9 +38,9 @@ void	sa(t_stack *a, int print_option, t_mem *mem)
 	if (print_option == 1)
 		write(1, "sa\n", 3);
 	mem->action_count++;
+	return ;
 }
 
-/* Action SB demandée dans le sujet */
 void	sb(t_stack *b, int print_option, t_mem *mem)
 {
 	if (!b || !mem)
@@ -50,9 +49,9 @@ void	sb(t_stack *b, int print_option, t_mem *mem)
 	if (print_option == 1)
 		write(1, "sb\n", 3);
 	mem->action_count++;
+	return ;
 }
 
-/* Action SS demandée dans le sujet*/
 void	ss(t_stack *a, t_stack *b, int print_option, t_mem *mem)
 {
 	if (!a || !b || !mem)
@@ -62,4 +61,5 @@ void	ss(t_stack *a, t_stack *b, int print_option, t_mem *mem)
 	if (print_option == 1)
 		write(1, "ss\n", 3);
 	mem->action_count++;
+	return ;
 }

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line_utils.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: user42 <user42@student.42.fr>              +#+  +:+       +#+        */
+/*   By: mahautlatinis <mahautlatinis@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/12 13:55:29 by malatini          #+#    #+#             */
-/*   Updated: 2021/06/14 13:44:03 by user42           ###   ########.fr       */
+/*   Updated: 2023/10/13 15:06:08 by mahautlatin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,4 +67,5 @@ void	check_line(char *line, t_mem *mem)
 		}
 		i++;
 	}
+	return ;
 }
