@@ -66,6 +66,9 @@ fclean:				clean
 
 re:					fclean all
 
+vizualize:
+					python3 python_visualizer.py `ruby -e "puts (-50..50).to_a.shuffle.join(' ')"`
+
 bonus:				checker
 
 .PHONY:				checker bonus all clean fclean re
