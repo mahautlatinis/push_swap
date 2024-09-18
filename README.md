@@ -1,12 +1,20 @@
 # push_swap 📚
+
 Push_swap 2021 - (Common Core).
 
 The aim is to sort data stacks, using the lowest possible number of actions.
 
 - Actual Status : validated.
-- Result        : 125%
-  
-To use the visualizer, run `make` in the push_swap folder, than : 
+- Result : 125%
+
+To install vizualizer's needed dependency on macOS:
+
+```sh
+brew install python-tk
+```
+
+To use the visualizer, run `make` in the push_swap folder, than :
+
 ```sh
 python3 python_visualizer.py `ruby -e "puts (-50..50).to_a.shuffle.join(' ')"`
 ```
