@@ -7,6 +7,8 @@ The aim is to sort data stacks, using the lowest possible number of actions.
 - Actual Status : validated.
 - Result : 125%
 
+[Watch](https://youtu.be/Q-MtspTmFSs)
+
 To install vizualizer's needed dependency on macOS:
 
 ```sh
